@@ -20,10 +20,13 @@ jobs:
         node-version: '18'
 
     - name: Instalar dependencias
-      run: npm install
+      run: |
+        npm install -g htmlhint stylelint stylelint-config-standard
 
     - name: Validar HTML
-      run: npm run lint:html
+      run: htmlhint **/*.html
 
     - name: Validar CSS
-      run: npm run lint:css
+      run: |
+        echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+        stylelint "**/*.css"
