@@ -13,22 +13,45 @@
     padding: 20px;
   }
   
-  /* Links (específicos primero) */
-  #noticias article a,
-  #blog article a,
-  #deportes ul li a,
-  footer a {
+  /* Específicos primero para evitar descending-specificity */
+  #noticias article a {
     font-weight: bold;
     color: #007BFF;
   }
   
-  #noticias article a:hover,
-  #blog article a:hover,
-  #deportes ul li a:hover,
-  footer a:hover {
+  #noticias article a:hover {
     color: #0056b3;
   }
   
+  #blog article a {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  #blog article a:hover {
+    color: #0056b3;
+  }
+  
+  #deportes ul li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  #deportes ul li a:hover {
+    color: #0056b3;
+  }
+  
+  footer a {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    color: #007BFF;
+  }
+  
+  /* Ahora los selectores más generales */
   a {
     text-decoration: none;
     color: #007BFF;
@@ -117,11 +140,6 @@
   #deportes ul li {
     display: inline-block;
     margin-right: 20px;
-  }
-  
-  #deportes ul li a {
-    font-size: 1.1em;
-    font-weight: bold;
   }
   
   /* Resultados */
