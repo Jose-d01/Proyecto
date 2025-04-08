@@ -1,109 +1,175 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Depornoticias</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>Depornoticias</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#deportes">Deportes</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- Main Content -->
-    <main>
-        <!-- Inicio -->
-        <section id="inicio">
-            <h2>Bienvenidos a Depornoticias</h2>
-            <p>Todo lo que necesitas saber sobre tus deportes favoritos. Mantente al día con las últimas noticias, resultados y análisis de expertos.</p>
-        </section>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-        <!-- Noticias -->
-        <section id="noticias">
-            <h2>Últimas Noticias</h2>
+/* Específicos primero para evitar descending-specificity */
+#noticias article a {
+  font-weight: bold;
+  color: #007BFF;
+}
 
-            <article>
-                <h3>Fútbol Europeo: El Real Madrid Clasifica a Semifinales de la Champions</h3>
-                <p>Con una victoria por 3-1 sobre el Manchester City, el Real Madrid aseguró su pase a las semifinales de la UEFA Champions League 2025. Vinícius Jr. fue figura con un doblete, mientras que Jude Bellingham lideró el mediocampo con maestría.</p>
-                <a href="#">Leer más</a>
-            </article>
+#noticias article a:hover {
+  color: #0056b3;
+}
 
-            <article>
-                <h3>Tenis: Carlos Alcaraz Gana el Masters de Miami</h3>
-                <p>El joven prodigio español, Carlos Alcaraz, venció a Daniil Medvedev en la final del Masters 1000 de Miami, consolidándose como número 2 del mundo y confirmando su candidatura a Roland Garros este año.</p>
-                <a href="#">Leer más</a>
-            </article>
+#blog article a {
+  font-weight: bold;
+  color: #007BFF;
+}
 
-            <article>
-                <h3>NBA: Denver Nuggets Lideran la Conferencia Oeste</h3>
-                <p>Con una racha de 7 victorias consecutivas, los Nuggets de Nikola Jokić se posicionan como serios contendientes al título. El equipo de Denver ha mostrado solidez tanto en defensa como en ataque.</p>
-                <a href="#">Leer más</a>
-            </article>
-        </section>
+#blog article a:hover {
+  color: #0056b3;
+}
 
-        <!-- Deportes -->
-        <section id="deportes">
-            <h2>Deportes Destacados</h2>
-            <ul>
-                <li><a href="#">Fútbol</a></li>
-                <li><a href="#">Baloncesto (NBA)</a></li>
-                <li><a href="#">Tenis</a></li>
-                <li><a href="#">Rugby</a></li>
-                <li><a href="#">Fórmula 1</a></li>
-                <li><a href="#">Atletismo</a></li>
-            </ul>
-        </section>
+#deportes ul li a {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #007BFF;
+}
 
-        <!-- Blog -->
-        <section id="blog">
-            <h2>Blog Deportivo</h2>
+#deportes ul li a:hover {
+  color: #0056b3;
+}
 
-            <article>
-                <h3>¿Cómo Cambió el Juego el VAR en el Fútbol?</h3>
-                <p>Desde su introducción en 2018, el VAR ha transformado el fútbol profesional. Aunque ha traído mayor justicia, también ha sido foco de críticas por la demora en las decisiones y su impacto en la emoción del juego.</p>
-                <a href="#">Leer más</a>
-            </article>
+footer a {
+  color: #fff;
+  font-weight: bold;
+}
 
-            <article>
-                <h3>La Era Dorada del Tenis Español</h3>
-                <p>Con figuras como Rafael Nadal, Garbiñe Muguruza y ahora Carlos Alcaraz, España ha vivido una época histórica en el tenis. Este artículo repasa sus logros, rivalidades y el legado que están dejando para las futuras generaciones.</p>
-                <a href="#">Leer más</a>
-            </article>
+footer a:hover {
+  color: #007BFF;
+}
 
-            <article>
-                <h3>NBA y la Globalización del Baloncesto</h3>
-                <p>El crecimiento de la NBA fuera de EE. UU. ha sido imparable. Con jugadores internacionales como Giannis Antetokounmpo, Luka Dončić y Joel Embiid dominando la liga, el baloncesto se ha convertido en un fenómeno verdaderamente global.</p>
-                <a href="#">Leer más</a>
-            </article>
-        </section>
-    </main>
+/* Ahora los selectores más generales */
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Depornoticias. Todos los derechos reservados.</p>
-        <p>
-            <a href="#">Política de privacidad</a> |
-            <a href="#">Términos de uso</a>
-        </p>
-        <p>
-            Síguenos en nuestras redes sociales:
-            <a href="#">Instagram</a> |
-            <a href="#">Twitter</a> |
-            <a href="#">Facebook</a>
-        </p>
-    </footer>
-</body>
-</html>
+a:hover {
+  color: #0056b3;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Noticias */
+#noticias article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Blog */
+#blog article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Deportes */
+#deportes ul {
+  list-style-type: none;
+}
+
+#deportes ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Resultados */
+#resultados p {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #007BFF;
+}
+
+#resultados strong {
+  font-weight: bold;
+}
+
+/* Calendario */
+#calendario p {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #007BFF;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
